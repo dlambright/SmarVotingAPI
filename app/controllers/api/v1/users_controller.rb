@@ -19,7 +19,7 @@ module Api
       def create
         
         if params[:clientKey] == "OIUDFBOSU097098Y34IUBSFDV09898dvhsodfkjbaf93tb93rbrv"
-	  user = User.new(user_params)
+	      user = User.new(user_params)
           if user.save
             render json: {status: 'SUCCESS', message: 'Saved User', data:user},status: :ok
           else
@@ -60,15 +60,6 @@ module Api
       def user_params
         params.permit(:username, :password)
       end
-
-
-
-
-
-
-
-
-
     end
   end
 end
