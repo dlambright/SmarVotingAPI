@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       resources :users
       resources :issues
       resources :subscriptions
+      resources :comments
+      resources :voting_options
     end
   end
 end
