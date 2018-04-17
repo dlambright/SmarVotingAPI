@@ -49,7 +49,7 @@ module Api
       def destroy
         if params[:clientKey] == "OIUDFBOSU097098Y34IUBSFDV09898dvhsodfkjbaf93tb93rbrv"
           #voting_option = VotingOption.where(voting_option: params[:voting_option], topic: params[:issue])
-          voting_option = VotingOption.find_by(voting_option: params[:user], issue: params[:issue])
+          voting_option = VotingOption.find_by(id: params[:id])
           voting_option.destroy
           render json: {status: 'SUCCESS', message: 'VotingOption deleted successfully', data:voting_option},status: :ok 
         else

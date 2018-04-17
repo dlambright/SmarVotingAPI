@@ -35,7 +35,7 @@ module Api
       def destroy
         if params[:clientKey] == "OIUDFBOSU097098Y34IUBSFDV09898dvhsodfkjbaf93tb93rbrv"
           #comment = Comment.where(user: params[:user], topic: params[:issue])
-          comment = Comment.find_by(user: params[:user], issue: params[:issue])
+          comment = Comment.find_by(id: params[:id])
           comment.destroy
           render json: {status: 'SUCCESS', message: 'Comment deleted successfully', data:comment},status: :ok
         else

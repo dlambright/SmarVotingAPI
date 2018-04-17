@@ -28,12 +28,22 @@ module Api
           if issue.save
             render json: {status: 'SUCCESS', message: 'Saved Issue', data:issue},status: :ok 
           else
-            render json: {status: 'ERROR', message: 'User not saved', data:issue.error},status: :unprocessable_entity
+            render json: {status: 'ERROR', message: 'Issue not saved', data:issue.error},status: :unprocessable_entity
           end 
         else
             render json: {status:'FAILURE',message:'Incorrect Password'},status: :bad_password
         end 
-      end   
+      end
+      def destroy
+        if params[:clientKey] == "OIUDFBOSU097098Y34IUBSFDV09898dvhsodfkjbaf93tb93rbrv"
+          issue = Issue.find(params[:id])
+          issue.destroy
+          render json: {status: 'SUCCESS', message: 'User deleted successfully', data:issue},status: :ok 
+        else
+            render json: {status:'FAILURE',message:'Incorrect Password'},status: :bad_password  
+        end 
+      end 
+   
       private
 
       def issue_params
