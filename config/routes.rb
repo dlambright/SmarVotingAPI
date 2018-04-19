@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :subscriptions
       resources :comments
       resources :voting_options
+      resources :ballots
     end
   end
 end

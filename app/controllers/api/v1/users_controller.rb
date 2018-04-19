@@ -4,7 +4,7 @@ module Api
 
       def index
       	users = User.order('created_at DESC')
-        #render json: {status:'SUCCESS',message:'Loaded users',data:users},status: :ok
+        render json: {status:'SUCCESS',message:'Loaded users',data:users},status: :ok
       end
       
       def show
