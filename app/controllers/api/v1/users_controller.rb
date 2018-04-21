@@ -3,8 +3,12 @@ module Api
     class UsersController < ApplicationController
 
       def index
-      	users = User.order('created_at DESC')
-        render json: {status:'SUCCESS',message:'Loaded users',data:users},status: :ok
+        if params[:clientKey] == "OIUDFBOSU097098Y34IUBSFDV09898dvhsodfkjbaf93tb93rbrv"
+      	  users = User.order('created_at DESC')
+          render json: {status:'SUCCESS',message:'Loaded users',data:users},status: :ok
+	    else
+            render json: {status:'FAILURE',message:'Incorrect Password'},status: :bad_password	
+	    end
       end
       
       def show

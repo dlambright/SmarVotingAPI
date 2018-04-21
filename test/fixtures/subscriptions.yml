@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: MyString
+  user: 1
   issue: 1
 
 two:
-  user: MyString
+  user: 1
   issue: 1
