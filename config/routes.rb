@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :comments
       resources :voting_options
       resources :ballots
+      resources :results
     end
   end
 end
