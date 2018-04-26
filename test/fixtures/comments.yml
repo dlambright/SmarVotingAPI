@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  issue: 1
+  voting_option: 1
   parent: 1
   body: MyString
   user: MyString
+  indent: 1
 
 two:
-  issue: 1
+  voting_option: 1
   parent: 1
   body: MyString
   user: MyString
+  indent: 1
